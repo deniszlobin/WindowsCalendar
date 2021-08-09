@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style>
+      body {
+        display: block;
+        margin: 8px;
+      }
+      #calendar {
+        margin: 0 auto;
+        border: 1px solid #000;
+        width: 252px;
+        position: relative;
+        overflow: hidden;
+      }
+      .daysName {
+        background: #ddd;
+        border-bottom: 1px solid #999;
+        border-top: 1px solid #999;
+        margin-right: -9px;
+      }
+      .daysName div {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        padding: 0 1px;
+        margin: 3px;
+        margin-right: 8px;
+        font-size: 14px;
+        line-height: 20px;
+        cursor: pointer;
+      }
+      #days {
+        margin-right: -9px;
+      }
+      .day {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        margin: 2px;
+        padding: 0 1px;
+        border: 1px solid transparent;
+        margin-right: 11px;
+        text-align: center;
+        cursor: pointer;
+        transition: background 0.1s, color 0.1s;
+      }
+      #date {
+        margin: 10px;
+      }
+      .buttons {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        user-select: none;
+      }
+      .button {
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      .day:hover {
+        background-color: rgb(167, 167, 167);
+        color: rgb(0, 0, 0);
+      }
+      .day.other {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="calendar">
+      <div class="controls">
+        <div id="date">
+          <span id="year">2021</span>
+          <span id="month">Август</span>
+        </div>
+        <div class="buttons">
+          <a class="button" id="prev">←</a>
+          <a class="button" id="next">→</a>
+        </div>
+      </div>
+      <div class="daysName">
+        <div>Пн</div>
+        <div>Вт</div>
+        <div>Ср</div>
+        <div>Чт</div>
+        <div>Пт</div>
+        <div>Сб</div>
+        <div>Вс</div>
+      </div>
+      <div id="days"></div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
